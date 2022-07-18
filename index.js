@@ -1,17 +1,18 @@
-import { createElement } from "./utils";
+import React from "react";
+import { createRoot } from 'react-dom/client';
 
-var count = 0;
+function App() {
+  const [count, setCount] = React.useState(0);
 
-function inc() {
-  count += 1;
-  document.getElementById("h1").textContent = count;
+  return (
+    React.createElement("div", {}, [
+      React.createElement("button", {
+        onClick: () => setCount(count + 1),
+      }, "Increment"),
+      React.createElement("h1", {}, count),
+    ])
+  )
 }
 
-// Making button Element
-var $button = createElement('button', null, "Increment", {
-  click: () => {
-    inc();
-  },
-});
-
-var $h1 = createElement('h1', 'h1', "0");
+const root = createRoot(document.getElementById('app'));
+root.render(React.createElement(App));
