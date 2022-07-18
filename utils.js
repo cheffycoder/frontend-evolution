@@ -1,6 +1,6 @@
 // Utils.js
 
-function createElement(type, id, content, events = {}) {
+export function createElement(type, id, content, events = {}) {
   const element = document.createElement(type);
   element.id = id;
   element.textContent = content;
