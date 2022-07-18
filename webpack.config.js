@@ -1,11 +1,11 @@
 // webpack.config.js
 module.exports = {
-  entry: "./index.js",
+  entry: "./index.jsx",
   target: ["web", "es5"],
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         use: "babel-loader",
       }
     ]
