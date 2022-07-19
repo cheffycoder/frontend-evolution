@@ -1,0 +1,13 @@
+{
+  // Setting up this file to setup the typescript compiler options
+  "compilerOptions": {
+    "sourceMap": true,
+    "allowJs": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "baseUrl": "src"
+  },
+  "include": ["/**/*.ts", "/**/*.tsx"],
+  "compileOnSave": false
+}
